@@ -1,0 +1,8 @@
+[1;31;40m[-300$] [1;33;40mQueen of Clubs [1;37;40m[Queen | Clubs | EVEN | BLACK][0m
+[1;31;40m[-500$] [1;33;40m4 of Spades [1;37;40m[4 | Spades | EVEN | BLACK][0m
+[1;31;40m[-400$] [1;33;40m7 of Clubs [1;37;40m[7 | Clubs | ODD | BLACK][0m
+[1;32;40m[+1200$] [1;33;40m3 of Spades [1;37;40m[3 | Spades | ODD | BLACK][0m
+[1;32;40m[+20000$] [1;33;40m6 of Diamonds [1;31;40m[6 | Diamonds | EVEN | RED][0m
+[1;32;40m[+200$] [1;33;40m7 of Hearts [1;31;40m[7 | Hearts | ODD | RED][0m
+[1;32;40m[+200$] [1;33;40m4 of Clubs [1;37;40m[4 | Clubs | EVEN | BLACK][0m
+[1;32;40m[+800$] [1;33;40m5 of Hearts [1;31;40m[5 | Hearts | ODD | RED][0m
