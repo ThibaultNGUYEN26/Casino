@@ -1,0 +1,5 @@
+1. blue letter for neon
+2. adaptative border for money display on screen
+3. stop money after 10 zeros
+4. history display 10 lines
+5. multiple bet

@@ -1,0 +1,5 @@
+[1;32;40m[+200$] [1;33;40m9 of Clubs [1;37;40m[9 | Clubs | ODD | BLACK][0m
+[1;31;40m[-400$] [1;33;40m7 of Hearts [1;31;40m[7 | Hearts | ODD | RED][0m
+[1;32;40m[+12$] [1;33;40mKing of Hearts [1;31;40m[King | Hearts | ODD | RED][0m
+[1;31;40m[-12$] [1;33;40m4 of Clubs [1;37;40m[4 | Clubs | EVEN | BLACK][0m
+[1;32;40m[+4000$] [1;33;40m10 of Clubs [1;37;40m[10 | Clubs | EVEN | BLACK][0m
