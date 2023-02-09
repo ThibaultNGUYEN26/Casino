@@ -45,28 +45,30 @@ try:
 		info_msg("Game", msg)
 
 	def set_history_msg(nb, col, status, bonus, bet):
+		global money
+
 		if status == "win":
 			if nb in number[1::2]:
 				if col in [color[0], color[2]]:
-					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | EVEN | BLACK]{EOC}"
+					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | EVEN | BLACK]{EOC} | {BLUE}{money + bonus}${EOC}"
 				elif col in [color[1], color[3]]:
-					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | EVEN | RED]{EOC}"
+					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | EVEN | RED]{EOC} | {BLUE}{money + bonus}${EOC}"
 			elif nb in number[0::2]:
 				if col in [color[0], color[2]]:
-					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | ODD | BLACK]{EOC}"
+					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | ODD | BLACK]{EOC} | {BLUE}{money + bonus}${EOC}"
 				elif col in [color[1], color[3]]:
-					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | ODD | RED]{EOC}"
+					msg2 = f"{GREEN2}[+{bonus}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | ODD | RED]{EOC} | {BLUE}{money + bonus}${EOC}"
 		if status == "lose":
 			if nb in number[1::2]:
 				if col in [color[0], color[2]]:
-					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | EVEN | BLACK]{EOC}"
+					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | EVEN | BLACK]{EOC} | {BLUE}{money}${EOC}"
 				elif col in [color[1], color[3]]:
-					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | EVEN | RED]{EOC}"
+					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | EVEN | RED]{EOC} | {BLUE}{money}${EOC}"
 			elif nb in number[0::2]:
 				if col in [color[0], color[2]]:
-					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | ODD | BLACK]{EOC}"
+					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {WHITE}[{nb} | {col} | ODD | BLACK]{EOC} | {BLUE}{money}${EOC}"
 				elif col in [color[1], color[3]]:
-					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | ODD | RED]{EOC}"
+					msg2 = f"{RED}[-{bet}$] {YELLOW}{nb} of {col} {RED2}[{nb} | {col} | ODD | RED]{EOC} | {BLUE}{money}${EOC}"
 		with open(history_path, 'a') as h:
 			h.write(msg2 + '\n')
 
@@ -133,6 +135,7 @@ try:
 						break
 					else:
 						info_msg("Info", "Back to the menu.")
+						add_bet(bet)
 						break
 				except ValueError:
 					info_msg("Error", "Type a valid number.")
@@ -167,8 +170,8 @@ try:
 							add_bet(bonus)
 						break
 					else:
-						add_bet(bet)
 						info_msg("Info", "Back to the menu.")
+						add_bet(bet)
 						break
 				except ValueError:
 					info_msg("Error", "Type a valid number.")
@@ -185,8 +188,8 @@ try:
 					if user_sign_choice < 1 or user_sign_choice > 5:
 						info_msg("Error", "Type a valid number.")
 					if user_sign_choice == 5:
-						add_bet(bet)
 						info_msg("Info", "Back to the menu.")
+						add_bet(bet)
 						break
 					else:
 						nb, col = random_card(number, color)
@@ -231,8 +234,8 @@ try:
 					if user_nb_choice < 1 or user_nb_choice > 14:
 						info_msg("Error", "Type a valid number.")
 					elif user_nb_choice == 14:
-						add_bet(bet)
 						info_msg("Info", "Back to the menu.")
+						add_bet(bet)
 						break
 					else:
 						nb, col = random_card(number, color)
@@ -263,8 +266,8 @@ try:
 					if user_nb_choice < 1 or user_nb_choice > 14:
 						info_msg("Error", "Type a valid number.")
 					elif user_nb_choice == 14:
-						add_bet(bet)
 						info_msg("Info", "Back to the menu.")
+						add_bet(bet)
 						break
 					else:
 						nb_choice = number[user_nb_choice - 1]
